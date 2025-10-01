@@ -34,7 +34,11 @@ class MyApp extends StatelessWidget {
         home: MyHomePage());
   }
 }
-
+  void _deleteTransaction(String id) {
+    setState(() {
+      _userTransactions.removeWhere((tx) => tx.id == id);
+    });
+  }
 class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
