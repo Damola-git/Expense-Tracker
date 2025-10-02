@@ -94,15 +94,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    final mediaQuery = MediaQuery.of(context);
+    final  isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
+    final appBar = AppBar(
         title: Text("Expense Planner"),actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () => _startAddNewTransaction(context),
           ),
         ],
-      ),
+      );
+    final txListWidget = Container(
+      height: (mediaQuery.size.height - appBar.preferredSize.height - mediaQuery.padding.top) * 0.7,
+      child: TransactionList(_userTransactions, _deleteTransaction,));
+
+    return Scaffold(
+      appBar: appBar
       body: SingleChildScrollView(
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
