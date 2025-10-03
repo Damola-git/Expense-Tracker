@@ -104,9 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       );
-    final txListWidget = Container(
-      height: (mediaQuery.size.height - appBar.preferredSize.height - mediaQuery.padding.top) * 0.7,
-      child: TransactionList(_userTransactions, _deleteTransaction,));
+     final txListWidget = Container(
+        height: (mediaQuery.size.height -
+                appBar.preferredSize.height -
+                mediaQuery.padding.top) *
+            0.8,
 
     return Scaffold(
       appBar: appBar
