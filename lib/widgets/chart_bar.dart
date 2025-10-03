@@ -49,19 +49,13 @@ return LayoutBuilder(builder: (ctx, constraints) {
           SizedBox(
             height: constraints.maxHeight * 0.05,
           ),
-              ),
+              Container(
+            child: FittedBox(
+              child: Text('\$${spendingAmount.toStringAsFixed(0)}'),
             ),
           ),
         ],
-      ),
-    ),
-
-    SizedBox(height: 4),
-
-   
-    Text('\$${spendingAmount.toStringAsFixed(0)}'),
-  ],
-);
-
+      );
+    });
   }
 }
