@@ -38,7 +38,7 @@ Through building this app, I practiced and understood:
 ---
 
 ## 📚 Learning Curve
-This project was more than just following a tutorial — I reinforced:
+This project helped me reinforce:
 1. How to **design adaptive UIs** that respond to orientation and screen size  
 2. How to **map data into widgets dynamically**  
 3. How to **work with lists, loops, and conditions** to render UI efficiently  
